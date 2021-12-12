@@ -1,17 +1,19 @@
 import Country from "../Country/Country";
+import "./CountryList.css";
 
 const CountryList = ({countries}) => {
   return (
     <div className='countries'>
       {
-        countries.map(({flag, country, population, region, capital}) => {
+        countries.map(({flag, name, population, region, capital}) => {
           return (
             <Country 
-             key={country} 
+             key={name} 
              flag={flag} 
-             country={country} 
+             country={name} 
              population={population} 
-             capital={capital}/>
+             capital={capital}
+             region={region}/>
           )
         })
       }

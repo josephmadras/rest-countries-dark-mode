@@ -1,0 +1,28 @@
+.country {
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.country__flag{
+  width: inherit;
+  height: 200px;
+}
+.country__flag .flag{
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+}
+
+.country > div:nth-child(2) {
+    padding: 20px 25px;
+}
+
+.country  h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+ul{
+   list-style: none;
+}
