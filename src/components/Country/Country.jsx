@@ -1,16 +1,18 @@
+import "./Country.css";
+
 const Country = ({flag, country, population, region, capital, props}) => {
   return (
-    <div class="country" {...props}>
-      <div>
-        <img src={flag} alt="country card"/>
+    <div className="country" {...props}>
+      <div className='country__flag'>
+        <img src={flag} alt="country flag"/>
       </div>
-      <div>
-      <h1>{Country}</h1>
-      <ul>
-        <li>Population: {population}</li>
-        <li>Region: {region}</li>
-        <li>Capital: {capital}</li>
-      </ul>
+      <div className='country__details'>
+        <h1>{Country}</h1>
+        <ul>
+          <li>Population: {population}</li>
+          <li>Region: {region}</li>
+          <li>Capital: {capital}</li>
+        </ul>
       </div>
     </div>
   )
