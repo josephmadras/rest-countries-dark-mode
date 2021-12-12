@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
+import "./CountryDetails.css";
 
 const CountryDetails = () => {
   const { name } = useParams();

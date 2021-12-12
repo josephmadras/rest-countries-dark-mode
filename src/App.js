@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
+import { Route, Routes } from "react-router";
 import axios from "axios";
 import CountryList from "./components/CountryList/CountryList";
 import Header from "./components/Header/Header";
-import "./App.css";
-import { Route, Routes } from "react-router";
-import Country from "./components/Country/Country";
 import CountryDetails from "./components/CountryDetails/CountryDetails";
+import "./App.css";
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -18,7 +17,6 @@ function App() {
     };
 
     getCountries();
-    // console.log(countries);
   }, []);
 
   return (

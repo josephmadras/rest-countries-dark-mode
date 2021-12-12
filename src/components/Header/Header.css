@@ -3,9 +3,15 @@
   width: 100%;
   justify-content: space-between;
   padding: 20px 125px;
-  box-shadow: 0px 0px 8px rgba(0,0,0,.2);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
 }
 
 .header__darkMode {
   display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.header__darkMode > div {
+  margin-left: 5px;
 }
