@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>REST Countries API</h1>
+      {/* <h1>REST Countries API</h1> */}
       <CountryList countries={countries}/>
     </div>
   );
