@@ -1,6 +1,7 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
 import CountryList from "./components/CountryList/CountryList"
+import Header from "./components/Header/Header"
 import "./App.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="app">
       {/* <h1>REST Countries API</h1> */}
+      <Header/>
       <CountryList countries={countries}/>
     </div>
   );
