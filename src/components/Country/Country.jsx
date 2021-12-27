@@ -1,12 +1,20 @@
 import "./Country.css";
 
-const Country = ({flag, country, population, region, capital, props}) => {
+const Country = ({
+  flag,
+  country,
+  population,
+  region,
+  capital,
+  onClick,
+  props,
+}) => {
   return (
-    <div className="country" {...props}>
-      <div className='country__flag'>
-        <img src={flag} alt="country flag" className='flag'/>
+    <div className="country" {...props} onClick={onClick}>
+      <div className="country__flag">
+        <img src={flag} alt="country flag" className="flag" />
       </div>
-      <div className='country__details'>
+      <div className="country__details">
         <h1>{country}</h1>
         <ul>
           <li>Population: {population}</li>
@@ -15,7 +23,7 @@ const Country = ({flag, country, population, region, capital, props}) => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Country
+export default Country;
