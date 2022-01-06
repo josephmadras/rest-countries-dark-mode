@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Route, Routes } from "react-router";
-import axios from "axios";
-import CountryList from "./components/CountryList/CountryList";
 import Header from "./components/Header/Header";
-import CountryDetails from "./components/CountryDetails/CountryDetails";
+import axios from "axios";
 import "./App.css";
+
+const CountryDetails = lazy(() =>
+  import("./components/CountryDetails/CountryDetails")
+);
+const Countries = lazy(() => import("./components/CountryList/CountryList"));
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -23,10 +26,12 @@ function App() {
     <div className="app">
       <Header />
       <main>
-        <Routes>
-          <Route path="/" element={<CountryList countries={countries} />} />
-          <Route path="/:name" element={<CountryDetails />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Countries countries={countries} />} />
+            <Route path="/:name" element={<CountryDetails />} />
+          </Routes>
+        </Suspense>
       </main>
     </div>
   );
